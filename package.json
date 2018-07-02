@@ -1,0 +1,40 @@
+{
+  "name": "wcookie",
+  "version": "1.0.0",
+  "description": "An small libraries that insert some key-value in the cookie",
+  "main": "dist/wcookie.js",
+  "scripts": {
+    "start:browser": "rimraf examples/browser/wcookie.js && env=dev PORT=2000 && webpack --config webpack.dev.js",
+    "build:browser": "rimraf examples/browser/wcookie.js && webpack",
+    "build:node": "webpack && xcopy 'dist/wcookie.js' 'examples/node/' && node examples/node/example.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-library",
+    "bundling",
+    "library"
+  ],
+  "author": "jeff",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "copy-webpack-plugin": "^4.5.2",
+    "eslint": "^3.9.1",
+    "eslint-loader": "^1.6.1",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^3.2.0",
+    "lodash": "^4.16.6",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-middleware": "^3.1.3",
+    "webpack-hot-middleware": "^2.22.2"
+  },
+  "dependencies": {
+    "js-cookie": "^2.2.0"
+  }
+}
